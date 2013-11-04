@@ -1,0 +1,15 @@
+.menu {
+	font-weight: bold;
+	color: white;
+	padding: 10px;
+	background: black;
+	border-radius: 15px;
+}
+.menu a:visited, a:hover {
+	color: white;
+}
+
+footer {
+	margin: 2em;
+	text-align: center;
+}
