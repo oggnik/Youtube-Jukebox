@@ -1,0 +1,11 @@
+Create a youtube jukebox.
+
+Queue of youtube videos on website.
+	Allow users to choose songs and put them into the queue.
+	This queue gets written to a file.
+
+On "server"
+	Something takes url's from file and plays them through speakers.
+	Possibly java, but that might get nasty.  Also, possibly a python script?
+	Eh, probably not java or python, perhaps another javascript site?
+
