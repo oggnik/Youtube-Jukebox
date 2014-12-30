@@ -12,7 +12,7 @@ $(document).ready(function() {
 				//Write queue to file
 				$.ajax({
 					type: 'POST',
-					url: "/Youtube-Jukebox/writeToFile.php",//url of receiver file on server
+					url: "writeToFile.php",//url of receiver file on server
 					data: {"dataString": newLink}, //your data
 					success: updateQueue(), //callback when ajax request finishes
 					dataType: "json" //text/json...

@@ -6,6 +6,7 @@ $data = $_POST['dataString'];
 $fname = "queue.txt";
 
 $file = fopen($fname, 'a+');
+echo "Received request\n"
 fwrite($file, $data);
 fclose($file);
 }

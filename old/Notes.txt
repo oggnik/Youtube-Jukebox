@@ -1,0 +1,37 @@
+node
+	runs
+	installs modules
+		express is popular
+
+to write to file
+
+
+app.js < file name
+//need to install express npm install express
+var express = import("express");
+var fs = import("fs");
+var app = express();
+
+//			this is what you would put in browser url
+app.get("/posts/", function(request, response) {
+	fs.readFile("posts.hson", "utf8", function(err, data) {
+		if (err) {
+			return response.send({err: JSON.stringify(err)});
+		}
+		return response.send(HSONtoJSON(data));
+	});
+});
+
+app.use(express.static(__dirname + "/site"));
+
+app.listen(3000);
+
+
+
+
+in browser:
+localhost:3000/posts/
+	to get stuff
+
+localhost:3000/index.html
+	index.html is in folder called site
