@@ -26,7 +26,7 @@ app.get('/submit', function(req, res) {
 	Post for submit
 	This is used to submit youtube links
 */
-app.post('/submit', function(req, res) {
+app.post('/link', function(req, res) {
 	var link = req.body.link;
 	console.log('Submit: %s', link);
 	linkQueue.push(link);

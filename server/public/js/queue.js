@@ -10,7 +10,7 @@ $(document).ready(function() {
 				var newLink = $(this).val();
 				console.log(newLink);
 
-				$.post("/submit", {link: newLink}, function(data) {
+				$.post("/link", {link: newLink}, function(data) {
 					if (data === 'done') {
 						//Submit succeeded
 						console.log('Submit succeeded');
