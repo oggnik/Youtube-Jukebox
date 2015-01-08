@@ -3,8 +3,10 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+// Links are stored in linkQueue until the player requests them
+var linkQueue = [];
+
 app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(express.json());
 
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/public/index.html');
@@ -25,9 +27,21 @@ app.get('/submit', function(req, res) {
 	This is used to submit youtube links
 */
 app.post('/submit', function(req, res) {
-	console.log(req.body);
-	console.log(req.body.link);
+	var link = req.body.link;
+	console.log('Submit: %s', link);
+	linkQueue.push(link);
 	res.end("done");
+})
+
+/*
+	Get for links
+	This is used to retrieve links
+*/
+app.get('/link', function(req, res) {
+	var link = linkQueue.shift();
+	console.log('Play: %s', link);
+
+	res.json({link: link});
 })
 
 // Serve the files in the /public folder
