@@ -7,7 +7,7 @@
 	border-radius: 15px;
 }
 
-a:visited, a:hover {
+.queue_link:visited, .queue_link:hover {
 	color: white;
 }
 
