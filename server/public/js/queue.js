@@ -8,6 +8,13 @@ $(document).ready(function() {
 			//If the enter key is hit
 			if (e.keyCode == 13) {
 				var newLink = $(this).val();
+				var loc = newLink.indexOf('v=');
+				if (loc === -1) {
+					// malformed url, alert user
+					alert("URL malformed, is it a youtube link?");
+					return;
+				}
+				newLink = newLink.substring(loc + 2);
 				console.log(newLink);
 
 				$.post("/link", {link: newLink}, function(data) {
@@ -17,6 +24,7 @@ $(document).ready(function() {
 					}
 					updateQueue();
 				});
+				$('#addField').val('');
 			};
 		});
 	}
