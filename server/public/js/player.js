@@ -2,7 +2,7 @@ function onYouTubeIframeAPIReady() {
 	nextSong();
 }
 
-var player;
+var player = null;
 
 function nextSong() {
 	$.get("/link", function(data) {
@@ -10,16 +10,24 @@ function nextSong() {
 			link = data.link;
 			console.log(data.link);
 
-			// Remove the previous player and add a new one.
-			player = new YT.Player('player', {
-				height: '390',
-				width: '640',
-				videoId: link,
-				events: {
-					'onReady': onPlayerReady,
-					'onStateChange': onPlayerStateChange
-				}
-			});
+			// If the player exists, load the new video
+			// Otherwise create the player
+			if (player) {
+				player.loadVideoById(link);
+			} else {
+				player = new YT.Player('player', {
+					height: '390',
+					width: '640',
+					videoId: link,
+					events: {
+						'onReady': onPlayerReady,
+						'onStateChange': onPlayerStateChange
+					}
+				});
+			}
+		} else {
+			// We did not get a link, so recall nextSong in 5 seconds
+			setInterval(nextSong, 5000);
 		}
 	});
 }
@@ -29,7 +37,8 @@ function onPlayerReady(event) {
 }
 
 function onPlayerStateChange(event) {
-	if(event.data === 0) {          
-		alert('done');
+	if(event.data === 0) {
+		console.log("done playing");
+		nextSong();
 	}
 }
