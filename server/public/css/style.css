@@ -1,10 +1,53 @@
+body {
+	background: #CCC;
+	position: relative;
+}
+
 .menu {
 	font-weight: bold;
 	font-size: 30px;
-	color: white;
-	padding: 10px;
-	background: black;
+	color: black;
+	padding-left: 10px;
+	padding-top: 1px;
 	border-radius: 15px;
+	width: 90%;
+	/* Center horizontally */
+	margin-right: auto;
+	margin-left: auto;
+}
+
+h3 {
+	margin: 0px;
+}
+
+.menu_link {
+	font-weight: normal;
+	font-size: 1em;
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+.menu_link:visited, .menu_link:hover {
+	color: black;
+}
+
+hr {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;    
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
 
 .queue_link:visited, .queue_link:hover {
@@ -12,12 +55,22 @@
 }
 
 #add_options {
-	background: green;
+	background: #4682B4;
 	font-weight: bold;
 	font-size: 20px;
 	border-radius: 10px;
 	padding: 10px;
-	margin: 1em;
+	width: 30%;
+	/* Center horizontally */
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	/* Move up, into the hr */
+	margin-top: -20px;
+}
+
+#addField {
+	/* Center the text in the submit field */
 	text-align: center;
 }
 
@@ -26,9 +79,13 @@
 	color: white;
 	padding: 3px;
 	margin: 1em;
-	background: gray;
-	border-radius: 20px;
+	background: #778899;
+	border-radius: 10px;
 	font-size: 12px;
+	width: 80%;
+	/* Center horizontally */
+	margin-right: auto;
+	margin-left: auto;
 }
 
 footer {
