@@ -47,7 +47,7 @@ app.get('/link', function(req, res) {
 // Serve the files in the /public folder
 app.use(express.static(__dirname + '/public'));
 
-var server = app.listen(3000, function() {
+var server = app.listen(3205, function() {
 	var host = server.address().address;
 	var port = server.address().port;
 
