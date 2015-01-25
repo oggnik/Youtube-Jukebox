@@ -25,6 +25,7 @@ h3 {
 	font-size: 1em;
 	margin-left: 1em;
 	margin-bottom: 1em;
+	color: black;
 }
 .menu_link:visited, .menu_link:hover {
 	color: black;
