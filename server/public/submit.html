@@ -14,7 +14,7 @@
 			<hr />
 		</div>
 		<div id="add_options">
-			<input type="text" id="addField" value="Youtube Link"/>
+			<input type="text" id="addField" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter Youtube Link':this.value;" value="Enter Youtube Link"/>
 		</div>
 		<div class="queue">
 			<div class="queue_title">Play Queue
