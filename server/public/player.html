@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="http://www.youtube.com/iframe_api"></script>
 		<script src="lib/jquery-1.9.1.min.js"></script>
+		<script src="js/updateQueue.js"></script>
 		<script src="js/player.js"></script>
 	</head>
 	<body>
@@ -14,6 +15,14 @@
 			<hr />
 		</div>
 		<div id="player"></div>
+		<div class="queue">
+			<div class="queue_title">Play Queue
+				<div class="updateButton" onClick="updateQueue()">Update Queue</div>
+			</div>
+
+			<div class="queue_list">
+			</div>
+		</div>
 	</body>
 	<footer>
 		<p>Created By Nikolas Ogg</p>

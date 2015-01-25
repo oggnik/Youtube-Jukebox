@@ -28,7 +28,4 @@ $(document).ready(function() {
 			};
 		});
 	}
-	function updateQueue() {
-		console.log("Update Queue");
-	}
 });

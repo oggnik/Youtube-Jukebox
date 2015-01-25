@@ -50,7 +50,7 @@ hr:before { /* Not really supposed to work, but does */
     border-radius: 20px;
 }
 
-.queue_link:visited, .queue_link:hover {
+.queue_link, .queue_link:visited, .queue_link:hover {
 	color: white;
 }
 
@@ -74,6 +74,44 @@ hr:before { /* Not really supposed to work, but does */
 	text-align: center;
 }
 
+#player {
+	display: block;
+	margin: 0 auto;
+}
+
+.queue {
+	width: 80%;
+	/* Center horizontally */
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 2em;
+}
+
+.queue_title {
+	font-weight: bold;
+	font-size: 20px;
+	padding-left: 1em;
+	padding: 5px;
+	border-bottom: solid;
+}
+
+.updateButton {
+	font-weight: normal;
+	color: white;
+	float: right;
+	background: #4682B4;
+	border-radius: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.updateButton:hover {
+	background: #003668;
+}
+
+
 .queue_element {
 	font-weight: italic;
 	color: white;
@@ -82,10 +120,6 @@ hr:before { /* Not really supposed to work, but does */
 	background: #778899;
 	border-radius: 10px;
 	font-size: 12px;
-	width: 80%;
-	/* Center horizontally */
-	margin-right: auto;
-	margin-left: auto;
 }
 
 footer {

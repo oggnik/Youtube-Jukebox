@@ -31,7 +31,7 @@ app.post('/link', function(req, res) {
 	console.log('Submit: %s', link);
 	linkQueue.push(link);
 	res.end("done");
-})
+});
 
 /*
 	Get for links
@@ -42,7 +42,15 @@ app.get('/link', function(req, res) {
 	console.log('Play: %s', link);
 
 	res.json({link: link});
-})
+});
+
+/*
+	Get the entire queue
+*/
+app.get('/queue', function(req, res) {
+	console.log('Request Queue');
+	res.json({queue: linkQueue});
+});
 
 // Serve the files in the /public folder
 app.use(express.static(__dirname + '/public'));

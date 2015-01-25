@@ -3,11 +3,12 @@ function onYouTubeIframeAPIReady() {
 }
 
 var player = null;
+var interval = null;
 
 function nextSong() {
 	$.get("/link", function(data) {
 		if (data.link) {
-			link = data.link;
+			var link = data.link;
 			console.log(data.link);
 
 			// If the player exists, load the new video
@@ -25,11 +26,18 @@ function nextSong() {
 					}
 				});
 			}
+			if (interval) {
+				clearInterval(interval);
+				interval = null;
+			}
 		} else {
 			// We did not get a link, so recall nextSong in 5 seconds
-			setInterval(nextSong, 5000);
+			if (!interval) {
+				interval = setInterval(nextSong, 5000);
+			}
 		}
 	});
+	updateQueue();
 }
 
 function onPlayerReady(event) {

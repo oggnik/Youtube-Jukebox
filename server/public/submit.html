@@ -4,6 +4,7 @@
 		<title>Youtube Jukebox</title>
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="lib/jquery-1.9.1.min.js"></script>
+		<script src="js/updateQueue.js"></script>
 		<script src="js/queue.js"></script>
 	</head>
 	<body>
@@ -15,16 +16,22 @@
 		<div id="add_options">
 			<input type="text" id="addField" value="Youtube Link"/>
 		</div>
-		<div id="queue">
-			<div class="queue_element">
-				<p>1) 
-					<a href="http://www.youtube.com" class="queue_link">www.youtube.com/v1</a>
-				</p>
+		<div class="queue">
+			<div class="queue_title">Play Queue
+				<div class="updateButton" onClick="updateQueue()">Update Queue</div>
 			</div>
-			<div class="queue_element">
-				<p>2) 
-					<a href="http://www.youtube.com" class="queue_link">www.youtube.com/v2</a>
-				</p>
+
+			<div class="queue_list">
+				<!-- <div class="queue_element">
+					<p>1) 
+						<a href="http://www.youtube.com" class="queue_link">www.youtube.com/v1</a>
+					</p>
+				</div>
+				<div class="queue_element">
+					<p>2) 
+						<a href="http://www.youtube.com" class="queue_link">www.youtube.com/v2</a>
+					</p>
+				</div> -->
 			</div>
 		</div>
 	</body>
