@@ -1,7 +1,7 @@
 
 Packages Needed:
-	express
-	body-parser
+- express
+- body-parser
 
 Everything needed is in the server directory.
 
