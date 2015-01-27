@@ -123,7 +123,39 @@ hr:before { /* Not really supposed to work, but does */
 	font-size: 12px;
 }
 
+#choiceContainer {
+	margin-bottom: 2em;
+	width: 40%;
+	/* Center horizontally */
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.choice {
+	background: #4682B4;
+	border-radius: 15px;
+	padding: 3em;
+	padding-left: 5em;
+	padding-right: 5em;
+	margin: 10px;
+	margin-bottom: 2em;
+	color: white;
+}
+
+.choice:visited, .choice:hover {
+	color: white;
+}
+
+#submitChoice {
+	float: left;
+}
+
+#playerChoice {
+	float: right;
+}
+
 footer {
+	clear: both;
 	margin: 2em;
 	text-align: center;
 }
